@@ -6,8 +6,7 @@ num2 = gets.to_i
 puts "The sum is #{num1 + num2}"
 puts "The subtraction is #{num1 - num2}"
 puts "The multiplication is #{num1 * num2}"
-puts "The division is #{num1.to_f / num2}"
-
+num2 == 0 ? (puts "The division by 0 is not defined") : (puts "The division is #{num1.to_f / num2}")
 
 # Calculate the factorial of a number:
 puts "\nEnter a number to calculate its factorial:"
@@ -16,6 +15,8 @@ num = gets.to_i
 def factorial(n)
   if n == 0
     return 1
+  elsif n < 0
+    puts "It's not possible to compute the factorial of a negative number."
   else
     return n * factorial(n-1)
   end
@@ -30,6 +31,8 @@ x = gets.to_i
 def summation(n)
   if n == 0
     return 0
+  elsif n < 0
+    puts "Please don't enter a negative number."
   else
     return n + summation(n-1)
   end
