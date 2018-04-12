@@ -27,10 +27,13 @@ puts factorial(num)
 # Calculate the summation of a number x (from 1 to x)
 puts "Enter a number to calculte its summation:"
 x = gets.to_i
-i = 1
-sum = 0
-until i > x do
-  sum += i
-  i+=1
+
+def summation(n)
+  if n == 0
+    return 0
+  else
+    return n + summation(n-1)
+  end
 end
-puts sum
+
+puts summation(x)
