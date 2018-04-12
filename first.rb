@@ -9,10 +9,17 @@ puts "The sum is "+(num1 + num2).to_s
 =end
 
 
-# Calculate the sum of the first 15 numbers os the fibonnacci sequence:
-def fibonacci( n )
-    [ n ] if ( 0..1 ).include? n
-    ( fibonacci( n - 1 ) + fibonacci( n - 2 ) ) if n > 1
-end
+# Calculate the factorial of a number:
+puts "Enter a number to calculte its factorial:"
+num = gets.to_i
 
-puts fibonacci( 5 )
+def factorial(n)
+  if n == 0
+    return 1
+  else
+    return n * factorial(n-1)
+  end
+end
+puts factorial(num)
+
+# Calculate the sum of the first 15 numbers of the fibonnacci sequence:
