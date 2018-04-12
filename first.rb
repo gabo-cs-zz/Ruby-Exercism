@@ -1,4 +1,3 @@
-=begin
 # Calculate the sum of two numbers
 puts "Hello world, we are going to calculate the sum of two numbers"
 puts "Enter the first number:"
@@ -9,7 +8,7 @@ puts "The sum is #{num1 + num2}"
 
 
 # Calculate the factorial of a number:
-puts "Enter a number to calculate its factorial:"
+puts "\nEnter a number to calculate its factorial:"
 num = gets.to_i
 
 def factorial(n)
@@ -23,7 +22,7 @@ end
 puts factorial(num)
 
 # Calculate the summation of a number x (from 1 to x)
-puts "Enter a number to calculte its summation:"
+puts "\nEnter a number to calculte its summation:"
 x = gets.to_i
 
 def summation(n)
@@ -35,10 +34,9 @@ def summation(n)
 end
 
 puts summation(x)
-=end
 
 # Calculate the sum of the 15 first digits of the fibonacci sequence
-aux, aux2, temp, i = 0, 1, 0, 1
+aux, aux2, temp, sum, i = 0, 1, 0, 0, 1
 nums = Array.new
 nums.push(temp)
 until i > 15
@@ -48,10 +46,9 @@ until i > 15
   nums.push(temp)
   i += 1
 end
-puts "These are the 15 first digits:"
+puts "\nThese are the 15 first digits of the fibonacci sequence:"
 p nums
-puts "And the sum of these numbers is:"
-sum = 0
+puts "And the summation of these numbers is:"
 nums.each do | k |
   sum += k
 end
