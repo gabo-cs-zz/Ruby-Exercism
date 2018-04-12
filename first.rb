@@ -1,10 +1,12 @@
-# Calculate the sum of two numbers
-puts "Hello world, we are going to calculate the sum of two numbers"
-puts "Enter the first number:"
+# Calculate the operations of two numbers
+print "Enter the first number: "
 num1 = gets.to_i
-puts "Enter the second number:"
+print "Enter the second number: "
 num2 = gets.to_i
 puts "The sum is #{num1 + num2}"
+puts "The subtraction is #{num1 - num2}"
+puts "The multiplication is #{num1 * num2}"
+puts "The division is #{num1.to_f / num2}"
 
 
 # Calculate the factorial of a number:
@@ -35,21 +37,21 @@ end
 
 puts summation(x)
 
+
 # Calculate the sum of the 15 first digits of the fibonacci sequence
-aux, aux2, temp, sum, i = 0, 1, 0, 0, 1
-nums = Array.new
-nums.push(temp)
-until i > 15
+aux, aux2, temp, sum, c = 0, 1, 0, 0, 1
+nums = [0]
+until c >= 15
   aux = aux2
   aux2 = temp
   temp = aux + aux2
   nums.push(temp)
-  i += 1
+  c += 1
 end
 puts "\nThese are the 15 first digits of the fibonacci sequence:"
 p nums
 puts "And the summation of these numbers is:"
-nums.each do | k |
-  sum += k
+nums.each do | i |
+  sum += i
 end
 puts sum
