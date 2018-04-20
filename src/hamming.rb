@@ -7,7 +7,7 @@ st2 = gets.upcase
 str1, str2 = st1.split(''), st2.split('')
 str1.pop
 str2.pop
-res = Array.new
+res = Array.new # Indication signs
 if st1.size != st2.size
   puts "The two strands must have the same length"
 else 
@@ -17,12 +17,12 @@ else
       s += 1
       res.push('^')
     end
-    res << "" 
+    res push('') 
     i += 1
   end
   puts "Here is your result:"
   puts st1
   puts st2
-  puts "#{res.join('')}"
+  # puts "#{res.join('')}" -- Here is where the indication signs would be.
   puts "The Hamming distance between these two DNA strands is #{s}."
 end
