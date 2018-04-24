@@ -1,5 +1,5 @@
 # Given a number (Max 4 digs), return its value in string form.
-# 5412 will output: 5 thousand 4 hundred twelve
+# 5412 will output: five thousand four hundred twelve
 $sw = true;
 def first(x)
   t = 'thousand'
