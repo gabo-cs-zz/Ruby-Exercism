@@ -13,25 +13,13 @@ def rna_transc(st1)
     end
     i += 1
   end
-  puts "The RNA Transcription of your DNA strands is #{res}."
+  puts "The RNA Transcription of your DNA strand is #{res}."
 end
 
-$sw = true
 puts 'Enter the DNA strand: '
 st = (gets.chomp).upcase
 arr = st.split('')
-p arr
-=begin
-(st.size).times { |i|
-  if (st[i] != 'C' && st[i] != 'G' && st[i] != 'T' && st[i] != 'A')
-    $sw = false
-  else 
-    $sw = true
-  end
-}
-$sw == false ? (rna_transc(st)) : (puts 'Please, enter a valid DNA strand')
-=end
-if (arr & ["C", "G", "T", "A"]).present? 
-  puts "Right"
-else puts "Wrong"
+if (arr & ["C", "G", "T", "A"]).present?
+  rna_transc(st)
+else puts 'Enter a valid DNA strand! '
 end
