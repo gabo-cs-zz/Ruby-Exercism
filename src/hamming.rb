@@ -15,9 +15,9 @@ def ham_dif(st1, st2)
 end
 
 puts 'Enter the first DNA strand: '
-st1 = (gets.chomp).upcase
+st1 = gets.chomp.upcase
 puts 'Enter the second DNA strand: '
-st2 = (gets.chomp).upcase
+st2 = gets.chomp.upcase
 unless st1.size == st2.size
   puts 'The strands must have the same length.'
 else 
