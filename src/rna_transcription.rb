@@ -1,7 +1,4 @@
 # Given a DNA strand, return its RNA complement (per RNA transcription).
-require 'active_support'
-require 'active_support/core_ext'
-
 def rna_transc(st1)
   res, i = '', 0
   until i > st1.size do
@@ -17,9 +14,8 @@ def rna_transc(st1)
 end
 
 puts 'Enter the DNA strand: '
-st = (gets.chomp).upcase
-arr = st.split('')
-if (arr & ["C", "G", "T", "A"]).present?
+st = gets.chomp.upcase
+if !(/[BD-FH-SU-Z]/.match(st))
   rna_transc(st)
 else puts 'Enter a valid DNA strand! '
 end
