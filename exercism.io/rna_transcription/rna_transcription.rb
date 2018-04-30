@@ -11,13 +11,11 @@ class Complement
   end
 
   def self.transc(char)
-    res = ''
     case char
-    when 'G' then res += 'C'
-    when 'C' then res += 'G'
-    when 'T' then res += 'A'
-    when 'A' then res += 'U'
+    when 'G' then 'C'
+    when 'C' then 'G'
+    when 'T' then 'A'
+    when 'A' then 'U'
     end
-    res
   end
 end
