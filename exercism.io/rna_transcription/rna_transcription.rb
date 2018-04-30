@@ -3,8 +3,8 @@ class Complement
   def self.of_dna(str)
     res = ''
     unless /[BD-FH-SU-Z]/ =~ str
-      str.size.times do |i|
-        res += transc(str[i])
+      str.each_char do |i|
+        res += transc(i)
       end
     end
     res
