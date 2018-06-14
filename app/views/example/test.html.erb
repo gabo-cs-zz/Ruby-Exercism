@@ -5,7 +5,11 @@
   <%= "#{i}, " %>
 <% end %>
 </p>
+<!-- Use of the "render_stars" helper: -->
 <p><b>Rating: </b><%= render_stars(5) %></p>
+<!-- Use of the "debug" helper: -->
 <%= debug @foo %>
+<!-- Use of the "current_time" instance variable: -->
 <p><%= "Current time: #{@current_time}" %></p>
+<!-- Use of the "footer" partial: -->
 <%= render partial: "footer", locals: {start_year: '2000'} %>
