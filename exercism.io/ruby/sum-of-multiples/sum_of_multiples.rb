@@ -7,12 +7,13 @@ class SumOfMultiples
   def initialize(*nums)
     @nums = nums
   end
-  
+
   def to(num)
-    # (@nums[0]...num).find_all {|i| @nums.any? {|n| i % n == 0} }.inject {|sum, i| sum + i}
-    return 0 if @nums.all? {|i| i > num }
-    (@nums[0]...num).inject do |sum, i|
-      sum + i if @nums.find_all {|n| i % n == 0 }
-    end
+    return 0 if @nums.all? { |i| i > num }
+    (@nums[0]...num).find_all { |i| multiples(i) }.inject { |sum, i| sum + i }
+  end
+
+  def multiples(num)
+    @nums.any? { |mul| (num % mul).zero? }
   end
 end
