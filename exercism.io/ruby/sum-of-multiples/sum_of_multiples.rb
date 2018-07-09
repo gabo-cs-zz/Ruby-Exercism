@@ -10,7 +10,7 @@ class SumOfMultiples
 
   def to(num)
     return 0 if @nums.all? { |i| i > num }
-    (@nums[0]...num).find_all { |i| multiples(i) }.inject { |sum, i| sum + i }
+    (@nums[0]...num).select { |i| multiples(i) }.sum
   end
 
   def multiples(num)
